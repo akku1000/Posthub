@@ -30,8 +30,7 @@ signup:async({name,email,password})=>{
   try {
     const res = await axios.post(
       "http://localhost:5000/api/auth/login",
-      { email, password },
-      { withCredentials: true }
+      { email, password }
     );
 
     set({ user: res.data, loading: false });
