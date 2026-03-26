@@ -12,7 +12,7 @@ function App() {
  const {user,checkAuth,allpost}=userstore();
  useEffect(() => {
     checkAuth()
- }, [checkAuth])
+ }, [])
  useEffect(() => {
    allpost();
  }, [])
