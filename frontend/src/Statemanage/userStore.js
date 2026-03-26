@@ -15,7 +15,7 @@ signup:async({name,email,password})=>{
      set({loading:true})
     //console.log(name,email,password,confirmpassword);
     try {
-        const res=await axios.post('http://localhost:5000/api/auth/signup',{name,email,password});
+        const res=await axios.post('https://posthub-knik.onrender.com/api/auth/signup',{name,email,password});
        // console.log(res.data)
         //console.log(res.data.user)
         set({user:res.data,loading:false});
@@ -49,9 +49,9 @@ signup:async({name,email,password})=>{
  checkAuth:async()=>{
     set({checkingAuth:true})
      try {
-        const res=await axios.get("http://localhost:5000/api/auth/refresh-token",{withCredentials:true});
+        const res=await axios.get("https://posthub-knik.onrender.com/api/auth/refresh-token",{withCredentials:true});
         //console.log(res)
-        const profile=await axios.get("http://localhost:5000/api/auth/profile",{withCredentials:true});
+        const profile=await axios.get("https://posthub-knik.onrender.com/api/auth/profile",{withCredentials:true});
         // console.log(profile)
         set({user:profile.data,checkingAuth:false});
      } catch (error) {
@@ -80,7 +80,7 @@ signup:async({name,email,password})=>{
     }
 
     const res = await axios.post(
-      "http://localhost:5000/api/post/posts",formData,
+      "https://posthub-knik.onrender.com/api/post/posts",formData,
       {
         withCredentials: true,
         headers: {
@@ -103,7 +103,7 @@ signup:async({name,email,password})=>{
 },
 allpost:async()=>{
     try {
-        const res=await axios.get("http://localhost:5000/api/post/allposts",{withCredentials:true});
+        const res=await axios.get("https://posthub-knik.onrender.com/api/post/allposts",{wihttps://posthub-knik.onrender.com
          console.log(res.data)
         set({posts:res.data})
         //console.log(event[0])
@@ -114,7 +114,7 @@ allpost:async()=>{
 like:async(postid)=>{
     // console.log(eventid)
     try {
-        const res=await axios.put(`http://localhost:5000/api/post/${postid}/like`,{},{withCredentials:true})
+        const res=await axios.put(`https://posthub-knik.onrender.com/api/post/${postid}/like`,{},{withCredentials:true})
      
     set((state) => ({
       posts: state.posts.map((post) => {
@@ -139,7 +139,7 @@ comment: async (postid, text) => {
   try {
 
     const res = await axios.post(
-      `http://localhost:5000/api/post/${postid}/comment`,
+      `https://posthub-knik.onrender.com/api/post/${postid}/comment`,
       { text },
       { withCredentials: true }
     );
@@ -164,7 +164,7 @@ comment: async (postid, text) => {
 },
 commentbyid:async(postid)=>{
      try {
-        const res=await axios.get(`http://localhost:5000/api/post/${postid}/commentbyid`,{withCredentials:true});
+        const res=await axios.get(`https://posthub-knik.onrender.com/api/post/${postid}/commentbyid`,{withCredentials:true});
         console.log(res.data)
         set({specificpost:res.data})
      } catch (error) {
