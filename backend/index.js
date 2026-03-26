@@ -13,7 +13,9 @@ const app=express();
 
 app.use(cors({
   origin: "https://posthub-nine.vercel.app",
-  credentials: true
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // Ensure OPTIONS is here
+  allowedHeaders: ["Content-Type", "Authorization"] // Ensure Authorization is here
 }));
 
 app.use(express.json())
