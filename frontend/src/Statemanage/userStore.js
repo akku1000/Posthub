@@ -29,7 +29,7 @@ signup:async({name,email,password})=>{
   console.log(email, password);
   try {
     const res = await axios.post(
-      "http://localhost:5000/api/auth/login",
+      "https://posthub-knik.onrender.com/api/auth/login",
       { email, password },
       { withCredentials: true }
     );
@@ -60,7 +60,7 @@ signup:async({name,email,password})=>{
  },
  logout:async()=>{
      try{
-        await axios.post("http://localhost:5000/api/auth/logout",{},{withCredentials:true});
+        await axios.post("https://posthub-knik.onrender.com/api/auth/logout",{},{withCredentials:true});
         set({user:null})
      }
      catch(error){
