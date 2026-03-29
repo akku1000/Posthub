@@ -22,7 +22,7 @@ import { userstore } from "../Statemanage/userStore";
 
 const Feed = () => {
   // State for the "Create Post" functionality
-  const {createpost,posts,allpost,like,commentbyid,specificpost}=userstore()
+  const {user,createpost,posts,allpost,like,commentbyid,specificpost}=userstore()
   const navigate=useNavigate();
   
   const [postText, setPostText] = useState("");
