@@ -169,7 +169,7 @@ const Feed = () => {
                 <Button 
                   fullWidth 
                   startIcon={<ThumbUpOutlinedIcon />} 
-                  sx={{ color: "text.secondary", textTransform: "none" }}
+                  sx={{ color: post.likes.includes(user._id) ? "#e9ecf1" : "#2e4476", textTransform: "none" }}
                   onClick={()=>handlelike(post._id)}
                 >
                   Like ({post.likes.length})
