@@ -72,7 +72,7 @@ const Feed = () => {
         <Card sx={{ mb: 3, borderRadius: 3, boxShadow: "0px 4px 12px rgba(0,0,0,0.05)" }}>
           <CardContent>
             <Box sx={{ display: "flex", gap: 2, alignItems: "center" }}>
-              <Avatar sx={{ bgcolor: "#2e4476" }}>A</Avatar>
+              <Avatar sx={{ bgcolor: "#2e4476" }}>{user?.name?.[0]}</Avatar>
               <TextField
                 fullWidth
                 multiline
@@ -145,7 +145,7 @@ const Feed = () => {
             <CardContent>
               {/* User Header */}
               <Box sx={{ display: "flex", alignItems: "center", gap: 2, mb: 2 }}>
-                <Avatar sx={{ bgcolor: "#2e4476" }}>A</Avatar>
+                <Avatar sx={{ bgcolor: "#2e4476" }}>{post.user?.name?.[0]}</Avatar>
                 <Typography sx={{ fontWeight: "bold", color: "#2e4476" }}>
                   {post.user?.name}
                 </Typography>

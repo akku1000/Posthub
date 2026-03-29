@@ -104,7 +104,7 @@ signup:async({name,email,password})=>{
 allpost:async()=>{
     try {
         const res=await axios.get("https://posthub-knik.onrender.com/api/post/allposts",{withCredentials:true});
-         console.log(res.data)
+         //console.log(res.data)
         set({posts:res.data})
         //console.log(event[0])
     } catch (error) {
