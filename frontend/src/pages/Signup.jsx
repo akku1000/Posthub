@@ -8,7 +8,7 @@ import {
   Box
 } from "@mui/material";
 import { userstore } from "../Statemanage/userStore";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Signup = () => {
   const {signup}=userstore();
