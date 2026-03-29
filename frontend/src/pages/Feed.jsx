@@ -147,7 +147,7 @@ const Feed = () => {
               <Box sx={{ display: "flex", alignItems: "center", gap: 2, mb: 2 }}>
                 <Avatar sx={{ bgcolor: "#2e4476" }}>A</Avatar>
                 <Typography sx={{ fontWeight: "bold", color: "#2e4476" }}>
-                  {post.user.name}
+                  {post.user?.name}
                 </Typography>
               </Box>
 
