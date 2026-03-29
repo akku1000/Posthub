@@ -8,7 +8,7 @@ import {
   Box
 } from "@mui/material";
 import { userstore } from "../Statemanage/userStore";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const {login}=userstore();
@@ -55,7 +55,7 @@ const Login = () => {
             align="center"
             sx={{ color: "#2e4476", fontWeight: "bold" }}
           >
-            Create Account
+            Login to Your Account
           </Typography>
   
           <Box sx={{ mt: 3 }}>
@@ -90,6 +90,12 @@ const Login = () => {
               Login
             </Button>
           </Box>
+
+          <Link to="/signup" style={{ textDecoration: "none" }}>
+            <Typography variant="body2" align="center" sx={{ color: "#2e4476", mt: 2 }}>
+              Don't have an account? Register here
+            </Typography>
+          </Link>
         </Paper>
       </Container>
     );

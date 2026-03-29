@@ -99,6 +99,11 @@ const Signup = () => {
             Signup
           </Button>
         </Box>
+          <Link to="/login" style={{ textDecoration: "none" }}>
+            <Typography variant="body2" align="center" sx={{ color: "#2e4476", mt: 2 }}>
+              Already have an account? Login here
+            </Typography>
+          </Link>
       </Paper>
     </Container>
   );
