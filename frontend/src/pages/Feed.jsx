@@ -169,7 +169,7 @@ const Feed = () => {
               <Box sx={{ mt: 1, display: "flex", justifyContent: "space-around" }}>
                 <Button 
                   fullWidth 
-                  startIcon={<ThumbUpRoundedIcon />} 
+                  startIcon={post.likes.includes(user._id) ?<ThumbUpRoundedIcon /> : <ThumbUpOutlinedIcon />}
                   sx={{ textTransform: "none" }}
                   onClick={()=>handlelike(post._id)}
                 >
