@@ -12,6 +12,7 @@ import {
   Divider,
 } from "@mui/material";
 // Icons make the UI look much more professional
+import ThumbUpRoundedIcon from '@mui/icons-material/ThumbUpRounded';
 import ThumbUpOutlinedIcon from "@mui/icons-material/ThumbUpOutlined";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import PhotoCameraIcon from "@mui/icons-material/PhotoCamera";
@@ -168,8 +169,8 @@ const Feed = () => {
               <Box sx={{ mt: 1, display: "flex", justifyContent: "space-around" }}>
                 <Button 
                   fullWidth 
-                  startIcon={<ThumbUpOutlinedIcon />} 
-                  sx={{ color: post.likes.includes(user._id) ?  "#2e4476":"#e9ecf1", textTransform: "none" }}
+                  startIcon={<ThumbUpRoundedIcon />} 
+                  sx={{ textTransform: "none" }}
                   onClick={()=>handlelike(post._id)}
                 >
                   Like ({post.likes.length})
