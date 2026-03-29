@@ -44,7 +44,7 @@ const createpost  = async (req, res) => {
 };
 const getall=async(req,res)=>{
     try {
-        const posts = await Post.find({}).sort({ createdAt: -1 });
+        const posts = await Post.find({}).populate("user","name").sort({ createdAt: -1 });
         res.json(posts)
     } catch (error) {
         return res.status(500).json({message:error.message})
